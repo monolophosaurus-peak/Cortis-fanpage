@@ -1,0 +1,204 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #e3f0ff;
+  color: #252b3b;
+  line-height: 1.6;
+}
+
+header {
+  padding: 28px 16px;
+  background: #182552;
+  color: white;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1.3;
+}
+
+header p {
+  margin: 8px 0 0;
+  color: #dce5ff;
+}
+
+main {
+  width: calc(100% - 32px);
+  max-width: 720px;
+  margin: 24px auto;
+}
+
+.section {
+  margin-bottom: 18px;
+  padding: 18px;
+  background: white;
+  border-radius: 12px;
+}
+
+h2 {
+  margin: 0 0 12px;
+  color: #182552;
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+.section p {
+  margin: 10px 0;
+}
+
+.group-pic {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 16px;
+  border-radius: 10px;
+}
+
+.members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px 14px;
+}
+
+.member {
+  width: 120px;
+  text-align: center;
+}
+
+.member img {
+  display: block;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 3px solid #182552;
+  border-radius: 50%;
+  background: #e3f0ff;
+}
+
+.member p {
+  margin: 7px 0 0;
+  font-weight: bold;
+}
+
+button {
+  margin: 5px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #182552;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background: #304477;
+}
+
+button:focus-visible {
+  outline: 3px solid #7896ed;
+  outline-offset: 3px;
+}
+
+button:active {
+  background: #101b3d;
+}
+
+#fact {
+  font-size: 1.05rem;
+}
+
+.songs {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px 12px;
+}
+
+.song {
+  min-width: 0;
+  text-align: center;
+}
+
+.song img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  background: #e3f0ff;
+}
+
+.song p {
+  margin: 0 0 5px;
+  font-weight: bold;
+}
+
+.song audio {
+  width: 100%;
+}
+
+footer {
+  padding: 18px 16px;
+  color: #626b7c;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+@media (max-width: 560px) {
+  header {
+    padding: 24px 14px;
+  }
+
+  header h1 {
+    font-size: 1.75rem;
+  }
+
+  main {
+    width: calc(100% - 20px);
+    margin: 16px auto;
+  }
+
+  .section {
+    padding: 15px;
+    margin-bottom: 14px;
+  }
+
+  .members {
+    gap: 16px 8px;
+  }
+
+  .member {
+    width: calc((100% - 16px) / 3);
+  }
+
+  .member img {
+    width: min(100%, 120px);
+    height: auto;
+    aspect-ratio: 1;
+    margin: 0 auto;
+  }
+
+  .songs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  button {
+    transition: none;
+  }
+}
